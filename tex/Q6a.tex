@@ -1,0 +1,402 @@
+% Gauge Structure from Admissible Non-Injective Projection
+% Cosmochrony companion paper M4a
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{doi}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{Gauge Structure from Admissible Non-Injective Projection}
+
+\author{J\'er\^ome Beau\\
+\small Independent Researcher\\
+\small \texttt{jerome.beau@cosmochrony.org}}
+
+\date{2026}
+
+\begin{document}
+
+  \maketitle
+
+  \begin{abstract}
+    Starting from the axiomatic foundation of admissible non-injective
+    transitions~\cite{FoundationM}, we derive the structure of gauge theory without
+    introducing it as a postulate.
+    Gauge charges are identified as invariants of equivalence classes in the projection
+    fibre: two configurations are gauge-equivalent when they project to the same
+    observable state.
+    The group of fibre-preserving transformations constitutes the gauge group, with
+    $\mathrm{U}(1)$, $\mathrm{SU}(2)$, and $\mathrm{SU}(3)$ identified as natural
+    candidates from the admissibility structure.
+    The gauge connection arises as the correction required to compare admissible fibres
+    over neighbouring points, and Yang\textendash Mills dynamics follow from minimising
+    the curvature of this connection.
+    No dynamical substrate is required at any step; the derivations rest solely on
+    Axioms~A1--A4 of~\cite{FoundationM} and the spectral results of the O-series.
+    Effective spacetime geometry is derived in the companion paper~\cite{Q6b}.
+  \end{abstract}
+
+  \section{Introduction}
+    \label{sec:intro}
+
+    \subsection*{Position in the programme}
+
+      The companion papers~\cite{FoundationM,Q1,Q2} establish the quantum-mechanical
+      structure of the Cosmochrony framework: the proto-state, phase coherence, the
+      Born rule, the singlet correlator, and the Tsirelson bound, all derived from the
+      admissibility structure of non-injective projection.
+      These results concern the \emph{internal} structure of the admissible fibre at a
+      single transition step.
+
+      The present paper addresses one macroscopic consequence of allowing the projection
+      structure to vary from point to point in the effective continuum: the conserved
+      invariants of the projection fibre and the symmetry group they generate.
+      The answer is gauge charges and gauge groups (§\ref{sec:charges}), with
+      Yang\textendash Mills dynamics emerging from fibre transport (§\ref{sec:ym}).
+      Effective spacetime geometry is derived in the companion paper~\cite{Q6b}.
+
+    \subsection*{What is and is not derived in this paper}
+
+      This paper derives the \emph{structure} of gauge theory from the admissibility
+      framework.
+      It does not derive specific coupling constants or the precise matter content of
+      the Standard Model.
+      These remain open and are identified as directions for future work in
+      Section~\ref{sec:open}.
+
+      The derivations are structural: they identify which gauge groups are
+      \emph{admissible} given the constraints, not which specific values their
+      parameters take.
+
+    \subsection*{Organisation}
+
+      Section~\ref{sec:charges} derives gauge charges as fibre invariants and
+      identifies the gauge group.
+      Section~\ref{sec:connection} derives the gauge connection from the requirement of
+      consistent transport between neighbouring fibres.
+      Section~\ref{sec:ym} derives Yang\textendash Mills dynamics from the minimisation
+      of connection curvature.
+      Section~\ref{sec:open} identifies the open directions.
+
+  \section{Gauge Charges as Fibre Invariants}
+    \label{sec:charges}
+
+    \subsection{Charges from non-injectivity}
+
+      The non-injectivity of $\Pi_n$ (Axiom~A2 of~\cite{FoundationM}) means that
+      multiple configurations in $\Omega_n^{(c)}$ project to the same observable
+      state $O_n$.
+      These configurations are physically indistinguishable at the observable level
+      but may carry distinct internal structure.
+
+      \begin{definition}[Gauge charge]
+        \label{def:gauge-charge}
+        A \emph{gauge charge} is a functional
+        \begin{equation}
+          Q : \Omega_n^{(c)} \;\longrightarrow\; \mathbb{R}
+        \end{equation}
+        that is constant on projection fibres:
+        \begin{equation}
+          \Pi_n(\omega_1) = \Pi_n(\omega_2)
+          \;\Longrightarrow\;
+          Q(\omega_1) = Q(\omega_2).
+        \end{equation}
+      \end{definition}
+
+      A gauge charge is therefore an observable that cannot be resolved by $\Pi_n$
+      itself --- it lives in the kernel structure of $\Pi_n$ --- but is well-defined
+      on the fibre.
+
+      \begin{definition}[Gauge group]
+        \label{def:gauge-group}
+        The \emph{gauge group} $\mathcal{G}$ is the group of transformations
+        $\omega \mapsto g \cdot \omega$ that preserve the projection:
+        \begin{equation}
+          \mathcal{G}
+          \;:=\;
+          \bigl\{g \in \mathrm{Aut}(\Omega_n^{(c)}) \mid
+          \Pi_n(g \cdot \omega) = \Pi_n(\omega) \text{ for all } \omega \bigr\}.
+        \end{equation}
+      \end{definition}
+
+      $\mathcal{G}$ consists precisely of the fibre-preserving symmetries: it acts
+      within $\Pi_n^{-1}(O_n)$ without affecting the observable output.
+
+      \begin{remark}[Gauge invariance as structural necessity]
+        The gauge group is not introduced by hand.
+        It is forced by the structure of $\Pi_n$: as soon as $\Pi_n$ is non-injective,
+        there exist non-trivial fibre-preserving transformations, and hence a
+        non-trivial gauge group.
+        Gauge invariance is a structural consequence of Axiom~A2, not an additional
+        postulate.
+      \end{remark}
+
+    \subsection{Identification of the gauge groups}
+
+      Three natural candidates emerge from the fibre structure established in
+      Q1~\cite{Q1} and Q2~\cite{Q2}:
+
+      \begin{itemize}
+        \item \emph{$\mathrm{U}(1)$}: global phase rotations
+        $\omega \mapsto e^{i\theta}\omega$ within the complex fibre $\mathbb{C}^q$.
+        These preserve $|\omega|$ and hence the observable norm, while acting
+        non-trivially on the phase — which is in the kernel of $\Pi_n$ by the phase
+        invariance of $\sigma_c(n)$~\cite{O12}.
+
+        \item \emph{$\mathrm{SU}(2)$}: the stable fixed point of the admissibility
+        flow established in~\cite{Q2} Theorem~8.1.
+        Its fibre-preserving action on $\mathbb{C}^2$ is the spin-$\tfrac{1}{2}$
+        structure derived in~\cite{Q1}.
+
+        \item \emph{$\mathrm{SU}(3)$}: a structurally motivated candidate for a
+        higher-dimensional internal symmetry of the fibre, corresponding to multiple
+        co-admissible internal directions beyond $\mathrm{SU}(2)$.
+        Its identification from the O-series admissibility data is an open direction
+        (Section~\ref{sec:open}).
+      \end{itemize}
+
+      \begin{remark}[Status of $\mathrm{SU}(3)$]
+        The identification of $\mathrm{SU}(3)$ as a gauge group is a structural
+        hypothesis, not a derived result.
+        Establishing it would require finding, within the O-series spectral data, a
+        co-admissibility pattern for a group with $\mathrm{SU}(3)$ structure analogous
+        to the $\lambda_{1/2} = \lambda_{3/2}$ co-admissibility of~\cite{Q2}.
+        This is identified as a medium-term open direction.
+      \end{remark}
+
+  \section{The Gauge Connection}
+    \label{sec:connection}
+
+    \subsection{The problem of comparing neighbouring fibres}
+
+      The following development assumes that the admissible fibre $F_n$ admits an
+      effective continuum description in which it forms a smooth fibre bundle over an
+      effective spacetime manifold.
+      The precise sense in which this limit holds is established conditionally
+      in~\cite{Q5a}; it is used here as a working hypothesis.
+
+      For each point $x$ in the effective manifold, the fibre $F_x = \Pi^{-1}(x)$
+      carries the internal gauge structure of Section~\ref{sec:charges}.
+
+      When the projection $\Pi(x)$ varies from point to point, the fibres $F_x$ and
+      $F_{x+dx}$ are not canonically identified.
+      A state $\psi(x)$ transforming under $\mathcal{G}$ acquires an additional term
+      under differentiation:
+      \begin{equation}
+        \partial_\mu(g(x)\,\psi(x))
+        \;=\; g(x)\,\partial_\mu\psi(x) + (\partial_\mu g(x))\,\psi(x),
+      \end{equation}
+      which is not covariant under local gauge transformations $g(x) \in \mathcal{G}$.
+
+    \subsection{Gauge connection from fibre transport}
+
+      \begin{definition}[Gauge connection]
+        \label{def:connection}
+        A \emph{gauge connection} $A_\mu$ is the correction required to define a
+        covariant derivative
+        \begin{equation}
+          \label{eq:covariant-derivative}
+          D_\mu \;:=\; \partial_\mu + A_\mu
+        \end{equation}
+        such that $D_\mu\psi$ transforms homogeneously under local gauge
+        transformations.
+      \end{definition}
+
+      \begin{proposition}[Admissibility interpretation of $A_\mu$]
+        \label{prop:connection-admissibility}
+        In the projection framework, $A_\mu(x)$ encodes the local variation of the
+        admissible fibre structure: it is the infinitesimal correction needed to
+        transport an admissible configuration from the fibre at $x$ to the fibre
+        at $x + dx$ consistently with the admissibility constraints.
+      \end{proposition}
+
+      \begin{proof}[Structural argument]
+        The admissibility constraints (A1--A3 of~\cite{FoundationM}) define, at each
+        point $x$, a fibre $F_x$ of structurally compatible configurations.
+        When $\Pi(x)$ varies, the fibres $F_x$ and $F_{x+dx}$ are related by the
+        differential of the projection map.
+        Consistency of the admissibility condition across neighbouring fibres ---
+        i.e.\ that a configuration admissible at $x$ maps to an admissible
+        configuration at $x + dx$ --- requires a linear correction of the form
+        $A_\mu(x)\,dx^\mu$.
+        This correction is precisely the gauge connection.
+      \end{proof}
+
+      \begin{remark}[Relation to the holonomy argument]
+        The white paper~\cite{Cosmochrony} establishes that non-injective admissible
+        projections generically have non-trivial holonomy, which is the minimal
+        structural condition for a gauge symmetry to arise as a descriptive invariance.
+        Proposition~\ref{prop:connection-admissibility} is the local infinitesimal
+        version of this global statement.
+      \end{remark}
+
+  \section{Yang\textendash Mills Dynamics}
+    \label{sec:ym}
+
+    \subsection{Field strength as curvature of the connection}
+
+      \begin{definition}[Field strength]
+        \label{def:field-strength}
+        The \emph{field strength} associated with the gauge connection $A_\mu$ is the
+        curvature of the covariant derivative:
+        \begin{equation}
+          \label{eq:field-strength}
+          F_{\mu\nu} \;:=\; [D_\mu, D_\nu]
+          \;=\; \partial_\mu A_\nu - \partial_\nu A_\mu + [A_\mu, A_\nu].
+        \end{equation}
+      \end{definition}
+
+      $F_{\mu\nu}$ measures the failure of commutativity of parallel transport around
+      an infinitesimal loop --- equivalently, the non-commutativity of the admissibility
+      constraints in two neighbouring directions.
+
+    \subsection{Yang\textendash Mills action from admissibility minimisation}
+
+      \begin{proposition}[Yang\textendash Mills action from coherence minimisation]
+        \label{prop:ym-action}
+        The natural dynamical principle for the gauge connection is minimisation of the
+        deformation of the projection structure, leading to the action
+        \begin{equation}
+          \label{eq:ym-action}
+          S_{\mathrm{YM}}[A]
+          \;=\; \int \mathrm{Tr}\bigl(F_{\mu\nu} F^{\mu\nu}\bigr)\,\sqrt{-g}\,d^4x.
+        \end{equation}
+      \end{proposition}
+
+      \begin{proof}[Structural argument]
+        By Proposition~\ref{prop:connection-admissibility}, $A_\mu$ encodes the local
+        variation of the fibre structure.
+        The curvature $F_{\mu\nu}$ measures the incompatibility of this variation around
+        closed loops: a flat connection ($F_{\mu\nu} = 0$) corresponds to a globally
+        consistent fibre structure, while non-zero curvature signals inconsistency.
+        The admissibility principle (A3 of~\cite{FoundationM}) favours configurations
+        that preserve the full multiplicity of open directions without premature
+        selection.
+        Translated to the gauge connection, this principle selects configurations that
+        minimise incompatibility, i.e.\ minimise $\|F_{\mu\nu}\|^2$.
+        The action~\eqref{eq:ym-action} is the unique gauge-invariant,
+        Lorentz-invariant, second-order functional of $A_\mu$ that achieves this.
+      \end{proof}
+
+      \begin{corollary}[Yang\textendash Mills equations]
+        Variation of~\eqref{eq:ym-action} with respect to $A_\mu$ yields
+        \begin{equation}
+          \label{eq:ym-equations}
+          D_\mu F^{\mu\nu} \;=\; 0,
+        \end{equation}
+        the Yang\textendash Mills equations in vacuum.
+      \end{corollary}
+
+      \begin{remark}[Status]
+        \label{rem:ym-status}
+        Proposition~\ref{prop:ym-action} is a structural motivation, not a complete
+        proof.
+        The uniqueness claim requires showing that~\eqref{eq:ym-action} is the
+        \emph{only} admissibility-compatible action at second order in $A_\mu$.
+        This follows in the Born\textendash Infeld limit from the results
+        of~\cite{BornInfeld} (the BI action reduces to the Yang\textendash Mills action
+        in the weak-field regime), but a direct derivation from the axioms
+        of~\cite{FoundationM} alone is an open step identified in
+        Section~\ref{sec:open}.
+      \end{remark}
+
+  \section{Open Directions}
+    \label{sec:open}
+
+    \paragraph{Direct derivation of Yang\textendash Mills uniqueness.}
+      Proposition~\ref{prop:ym-action} gives a structural motivation for the
+      Yang\textendash Mills action.
+      Its uniqueness --- that $S_{\mathrm{YM}}$ is the \emph{only}
+      admissibility-compatible second-order action --- follows from the
+      Born\textendash Infeld limit~\cite{BornInfeld} but not yet from Foundation~M
+      axioms alone.
+
+    \paragraph{$\mathrm{SU}(3)$ from admissibility.}
+      The identification of $\mathrm{SU}(3)$ as a gauge group requires finding a
+      co-admissibility pattern for an $\mathrm{SU}(3)$-type group in the O-series
+      spectral data.
+      The analogue of the $\lambda_{1/2} = \lambda_{3/2}$ result on $2I$ (established
+      in~\cite{Q2}) must be found for a group with $\mathrm{SU}(3)$ structure.
+
+    \paragraph{Coupling constants.}
+      The present paper identifies which gauge groups are admissible.
+      It does not determine the numerical values of coupling constants
+      ($g_s$, $g_w$, $\alpha$).
+      These are expected to emerge from the quantitative spectral data of the O-series
+      via the transfer chain $c_\chi \to \delta_{\mathrm{pair}} \to \beta^* \approx 0.126$,
+      but the explicit identification is open.
+
+  \section*{Acknowledgements}
+
+  The author acknowledges the use of large language models as a supportive tool for
+  refining language, structure, and internal consistency during the development of
+  this manuscript.
+  All conceptual contributions, theoretical choices, and interpretations remain the
+  sole responsibility of the author.
+
+  \begin{thebibliography}{99}
+
+    \bibitem{FoundationM}
+    J.~Beau,
+    ``Admissible Non-Injective Transitions as the Primitive of Physical Description,''
+    Cosmochrony companion paper~M, Zenodo (2026).
+    \doi{10.5281/zenodo.19616329}.
+
+    \bibitem{Q1}
+    J.~Beau,
+    ``Phase Coherence as an Admissibility Constraint:
+    Structural Derivation from Born\textendash Infeld Fibre Minimality,''
+    Cosmochrony companion paper~M2, Zenodo (2026).
+    \doi{10.5281/zenodo.XXXXXXXX}.
+
+    \bibitem{Q2}
+    J.~Beau,
+    ``Quantum Structure beyond Spin-$\tfrac{1}{2}$:
+    Co-Admissible Sectors and the Emergence of $\mathrm{SU}(2)$ as a Fixed Point,''
+    Cosmochrony companion paper~M3, Zenodo (2026).
+    \doi{10.5281/zenodo.XXXXXXXX}.
+
+    \bibitem{BornInfeld}
+    J.~Beau,
+    ``Bounded Relational Dynamics and the Structural Necessity of
+    Born\textendash Infeld Geometry,''
+    Cosmochrony companion paper~C, Zenodo (2026).
+    \doi{10.5281/zenodo.18407505}.
+
+    \bibitem{Cosmochrony}
+    J.~Beau,
+    ``Cosmochrony: A Pre-Geometric Relational Framework for Emergent Physics,''
+    white paper, Zenodo (2026).
+    \doi{10.5281/zenodo.17957509}.
+
+    \bibitem{O12}
+    J.~Beau,
+    ``Weil Representation Spectral Capacity on Heisenberg Cayley Graphs,''
+    O12 spectral admissibility sub-programme paper, Zenodo (2026).
+    \doi{10.5281/zenodo.19243611}.
+
+    \bibitem{Q5a}
+    J.~Beau,
+    ``Large-$q$ Limit of the Admissible Fibre:
+    Representational and Operator Convergence,''
+    Cosmochrony companion paper~Q5a, Zenodo (2026).
+    \doi{10.5281/zenodo.XXXXXXXX}.
+
+    \bibitem{Q6b}
+    J.~Beau,
+    ``Effective Spacetime Geometry from Admissible Non-Injective Projection,''
+    Cosmochrony companion paper~M4b, Zenodo (2026).
+    \doi{10.5281/zenodo.XXXXXXXX}.
+
+  \end{thebibliography}
+
+\end{document}
