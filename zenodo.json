@@ -3,5 +3,6 @@
   "web_url": "https://cosmochrony.org/science/gauge-structure/q6a/",
   "main_tex": "tex/Q6a.tex",
   "zenodo_id": 19655294,
-  "doi": "10.5281/zenodo.19655294"
+  "doi": "10.5281/zenodo.19655294",
+  "version": "1.0"
 }
