@@ -1,21 +1,21 @@
 cff-version: 1.2.0
 message: "If you cite this work, please use the metadata from this file."
-title: "Large-q Limit of the Admissible Fibre: Representational and Operator Convergence"
+title: "Gauge Structure from Admissible Non-Injective Projection"
 type: software
 authors:
   - family-names: "Beau"
     given-names: "Jérôme"
-repository-code: "https://github.com/Cosmochrony/q6"
-url: "https://cosmochrony.org/science/emergent-geometry/q5/a/"
-version: "1.15.1"
-doi: "10.5281/zenodo.19642369"
+repository-code: "https://github.com/Cosmochrony/q6a"
+url: "https://cosmochrony.org/science/gauge-structure/q6a/"
+version: "1.0.1"
+doi: "10.5281/zenodo.19655294"
 license: "CC-BY-4.0"
 preferred-citation:
   type: article
-  title: "Large-q Limit of the Admissible Fibre: Representational and Operator Convergence"
+  title: "Gauge Structure from Admissible Non-Injective Projection"
   authors:
     - family-names: "Beau"
       given-names: "Jérôme"
   year: 2026
-  doi: "10.5281/zenodo.19642369"
-  url: "https://doi.org/10.5281/zenodo.19642369"
+  doi: "10.5281/zenodo.19655294"
+  url: "https://doi.org/10.5281/zenodo.19655294"
