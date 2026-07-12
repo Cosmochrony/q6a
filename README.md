@@ -13,7 +13,8 @@ This work addresses the **Q5 problem** posed in the Foundation paper:
 
 ## Quick Summary
 
-Q5a reduces the continuum limit problem to a **single spectral condition**.
+This repository contains the source of the **Q6a Cosmochrony paper**
+*Gauge Structure from Admissible Non-Injective Projection*.
 
 More precisely:
 
