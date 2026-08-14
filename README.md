@@ -30,7 +30,8 @@ companion papers of the emergent-geometry sub-programme.
 
 Q6a belongs to the **gauge structure sub-programme** (Presentation Note 3).
 Its inputs are the Foundation axioms (paper M), the quantum-structure results (Q1, Q2),
-and the spectral admissibility results (O12, O23, O27); the capacity bound it references
+and the spectral admissibility results (O12, O27, and O23 conditionally on its supplied
+spinor carrier); the capacity bound it references
 is the capacity axiom [A-cap] of the companion capacity paper, with the Born–Infeld
 action as its saturation candidate.
 
