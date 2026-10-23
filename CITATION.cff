@@ -1,18 +1,18 @@
 cff-version: 1.2.0
 message: "If you cite this work, please use the metadata from this file."
-title: "Gauge Structure from Admissible Non-Injective Projection"
+title: "Toward Gauge Structure from Non-Injective Projection: Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection"
 type: software
 authors:
   - family-names: "Beau"
     given-names: "Jérôme"
 repository-code: "https://github.com/Cosmochrony/q6a"
 url: "https://cosmochrony.org/science/gauge-structure/q6a/"
-version: "2.2"
+version: "2.3"
 doi: "10.5281/zenodo.19655294"
 license: "CC-BY-4.0"
 preferred-citation:
   type: article
-  title: "Gauge Structure from Admissible Non-Injective Projection"
+  title: "Toward Gauge Structure from Non-Injective Projection: Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection"
   authors:
     - family-names: "Beau"
       given-names: "Jérôme"

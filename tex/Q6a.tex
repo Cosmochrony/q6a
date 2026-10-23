@@ -1,4 +1,4 @@
-% Gauge Structure from Admissible Non-Injective Projection
+% Toward Gauge Structure from Non-Injective Projection
 % Cosmochrony companion paper M4a
 
 \documentclass[11pt,a4paper]{article}
@@ -15,7 +15,8 @@
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
 
-\title{Gauge Structure from Admissible Non-Injective Projection}
+\title{Toward Gauge Structure from Non-Injective Projection:\\[0.4em]
+{\large Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}}
 
 \author{J\'er\^ome Beau\\
 \small Independent Researcher\\
@@ -28,24 +29,27 @@
   \maketitle
 
   \begin{abstract}
-    Starting from the axiomatic foundation of admissible non-injective
-    transitions~\cite{Beau2026m}, we derive the structure of gauge theory without
-    introducing it as a postulate.
-    Gauge charges are identified as invariants of equivalence classes in the projection
-    fibre: two configurations are gauge-equivalent when they project to the same
-    observable state.
-    The group of fibre-preserving transformations constitutes the gauge group.
-    $\mathrm{SU}(2)$ is identified as the unique minimal non-abelian admissible group
-    from the quaternionic structure of the admissible fibre; $\mathrm{U}(1)$ arises as
-    the residual phase symmetry; $\mathrm{SU}(3)$ is a structurally motivated candidate
-    extension whose derivation remains open.
-    The gauge connection arises as the infinitesimal generator of fibre transport under
-    varying projection, and Yang\textendash Mills dynamics emerge from minimising the
-    resulting curvature.
-    No dynamical substrate is required at any step; the derivations rest solely on
-    Axioms~A1--A4 of~\cite{Beau2026m} and the spectral results of the O-series.
-    Effective spacetime geometry, requiring the continuum limit of~\cite{Beau2026q5a},
-    is left for a companion paper.
+    Starting from the axioms of admissible non-injective transitions of the Foundation paper, we
+    set out the gauge-theoretic structures that the fibres of a non-injective projection carry,
+    and state which of them are defined, which are conditional, and which remain open.
+    Gauge charges are defined as invariants of the projection fibres: two configurations are
+    gauge-equivalent when they project to the same observable state.
+    The group of fibre-preserving transformations is the gauge group.
+    $\mathrm{U}(1)$ arises as the residual global phase symmetry.
+    On the spinor carrier $V_\rho \cong \mathbb{C}^2$ supplied conditionally by paper O23, and
+    under the neutral-sector hypothesis of paper O27, the non-abelian sector is $\mathfrak{su}(2)$
+    and the group acting faithfully on the carrier is $\mathrm{SU}(2)$.
+    This is a consistency statement about a supplied carrier, not a selection: the paper does
+    not establish that $\mathrm{SU}(2)$ is the unique or minimal non-abelian group compatible with
+    admissible projection, and the carrier selection is open.
+    $\mathrm{SU}(3)$ is a structural hypothesis whose identification is open.
+    Under two continuum hypotheses that are not proved, the second of which is the open spatial
+    continuum question of paper Q5a, the gauge connection is the infinitesimal generator of fibre
+    transport, and its curvature measures the failure of transport around infinitesimal loops.
+    The Yang\textendash Mills action is a structural motivation on this curvature, not a
+    derivation from the axioms.
+    The paper determines neither the gauge group nor Yang\textendash Mills dynamics; it locates
+    where each would enter.
   \end{abstract}
 
   \paragraph{Keywords.}
@@ -61,48 +65,45 @@
 
   \subsection*{Position in the programme}
 
-    The companion papers~\cite{Beau2026m,Beau2026q1,Beau2026q2} establish the quantum-mechanical
-    structure of the Cosmochrony framework: the proto-state, phase coherence, the
-    Born rule, the singlet correlator, and the Tsirelson bound, all derived from the
-    admissibility structure of non-injective projection.
+    The Foundation paper~\cite{Beau2026m} states the axioms A1--A4 of admissible non-injective
+    transitions and derives from A3 the proto-state and the retention of phase coherence in the
+    admissible fibre.
     These results concern the \emph{internal} structure of the admissible fibre at a
     single transition step.
 
     The present paper addresses one macroscopic consequence of allowing the projection
     structure to vary from point to point in the effective continuum: the conserved
     invariants of the projection fibre and the symmetry group they generate.
-    The answer is gauge charges and gauge groups (§\ref{sec:charges}), with
-    Yang\textendash Mills dynamics emerging from fibre transport (§\ref{sec:ym}).
-    Effective spacetime geometry, which depends on the continuum limit
-    of~\cite{Beau2026q5a}, is left for a companion paper.
+    The answer is gauge charges and a gauge group (§\ref{sec:charges}), with a connection
+    and its curvature defined through fibre transport under stated continuum hypotheses
+    (§\ref{sec:connection}--\ref{sec:ym}).
+    Effective spacetime geometry is not addressed: the spatial continuum it requires is an open
+    question of~\cite{Beau2026q5a}.
 
   \subsection*{What is and is not derived in this paper}
 
-    The present work establishes the structural origin of gauge symmetry and gauge
-    connection from admissible non-injective projection.
-    It is not intended as a full reconstruction of the Standard Model, but as an
-    identification of the minimal structures that must emerge at the effective level.
-
-    This paper derives the \emph{structure} of gauge theory from the admissibility
-    framework.
-    It does not derive specific coupling constants or the precise matter content of
-    the Standard Model.
-    These remain open and are identified as directions for future work in
-    Section~\ref{sec:open}.
-
-    The derivations are structural: they identify which gauge groups are
-    \emph{admissible} given the constraints, not which specific values their
-    parameters take.
+    The paper defines gauge charges and the gauge group from the fibre structure of a
+    non-injective projection, and identifies the residual phase symmetry $\mathrm{U}(1)$.
+    It does not select the gauge group.
+    Its non-abelian part is read off a carrier that is supplied, not derived: on the spinor
+    carrier of~\cite{Beau2026a27}, and under the neutral-sector hypothesis of~\cite{Beau2026a31},
+    it is $\mathrm{SU}(2)$ (Proposition~\ref{thm:su2-rigidity}).
+    $\mathrm{SU}(3)$ is a hypothesis.
+    The connection, its curvature and the Yang\textendash Mills action are conditional on two
+    continuum hypotheses that the paper does not prove, and the Yang\textendash Mills action is a
+    structural motivation, not a derivation.
+    Coupling constants and the matter content of the Standard Model are not derived.
+    These points are collected in Section~\ref{sec:open}.
 
   \subsection*{Organisation}
 
-    Section~\ref{sec:charges} derives gauge charges as fibre invariants,
-    identifies the gauge group, and establishes $\mathrm{SU}(2)$ as the unique
-    minimal non-abelian admissible group.
-    Section~\ref{sec:connection} derives the gauge connection as the infinitesimal
-    generator of fibre transport.
-    Section~\ref{sec:ym} derives Yang\textendash Mills dynamics from the curvature of
-    this connection.
+    Section~\ref{sec:charges} defines gauge charges as fibre invariants and the gauge group as
+    the group of fibre-preserving transformations, and states what fixes its non-abelian part
+    on a supplied carrier.
+    Section~\ref{sec:connection} defines, conditionally, the gauge connection as the
+    infinitesimal generator of fibre transport.
+    Section~\ref{sec:ym} gives the curvature of this connection and the structural motivation
+    for the Yang\textendash Mills action.
     Section~\ref{sec:open} identifies the open directions.
 
     \clearpage
@@ -152,120 +153,146 @@
 
     \begin{remark}[Gauge invariance as structural necessity]
         The gauge group is not introduced by hand.
-        It is forced by the structure of $\Pi_n$: as soon as $\Pi_n$ is non-injective,
-        there exist non-trivial fibre-preserving transformations, and hence a
-        non-trivial gauge group.
-        Gauge invariance is a structural consequence of Axiom~A2, not an additional
-        postulate.
+        It is fixed by the structure of $\Pi_n$ once $\mathrm{Aut}(\Omega_n^{(c)})$ is specified.
+        Provided $\mathrm{Aut}(\Omega_n^{(c)})$ contains the permutations of points within a
+        fibre, a non-injective $\Pi_n$ has non-trivial fibre-preserving transformations, and
+        hence a non-trivial gauge group.
+        Under that proviso, gauge invariance is a structural consequence of Axiom~A2, not an
+        additional postulate.
     \end{remark}
 
   \subsection{Structural constraints on admissible gauge groups}
     \label{subsec:gauge-constraints}
 
-    Not every group is admissible under Definition~\ref{def:gauge-group}.
-    Three structural constraints restrict the possible gauge groups.
+    Definition~\ref{def:gauge-group} alone does not restrict $\mathcal{G}$ to a particular
+    Lie group.
+    Three structural inputs bear on it; each is stated with its status.
 
     \begin{enumerate}[(i)]
         \item \emph{Non-factorisability.}
-        By Axiom~A3, the admissible fibre cannot decompose into independent components
-        at each transition.
-        This excludes purely abelian direct-product structures beyond a single residual
-        phase factor.
+        Once a representation-theoretic dictionary for $F_n$ is supplied, Axiom~A3 forces the
+        admissible generators to act irreducibly on $F_n$ (Foundation Lemma~5.6
+        of~\cite{Beau2026m}).
+        This constrains the admissible generators, not the fibre-preserving group
+        $\mathcal{G}$ directly; it is the structural reason why the fibre is not treated as a
+        product of independent components.
 
-        \item \emph{Compatibility with the admissible algebra.}
-        The admissible fibre is identified with the Weil representation of
-        $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$~\cite{Beau2026m},
-        whose continuous limit admits a quaternionic minimal structure conditionally on the
-        supplied spinor carrier (O23 Theorem~3.1)~\cite{Beau2026q2,Beau2026a27}.
-        By the classification of normed division algebras, the non-abelian part of
-        $\mathcal{G}$ must embed into the group of unit quaternions, which is
-        $\mathrm{SU}(2)$.
+        \item \emph{A supplied carrier.}
+        The axioms do not identify $F_n$ with a Heisenberg or Weil carrier (Foundation
+        Theorem~5.7 of~\cite{Beau2026m}).
+        The spectral programme supplies a Heisenberg carrier, on which the fibre carries the
+        Heisenberg\textendash Schr\"odinger representation of
+        $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ at a fixed central character~\cite{Beau2026q5a}.
+        Within that supplied setting, O23~\cite{Beau2026a27} (Theorem~3.1) shows that if the
+        admissible neutral sector is carried by an irreducible two-dimensional
+        $\mathrm{SU}(2)$-valued $V_\rho \cong \mathbb{C}^2$, its traceless neutral sector is
+        $\mathfrak{su}(2) \cong \mathrm{Im}\,\mathbb{H}$, of real dimension three.
+        The selection of that carrier is open in O23.
 
         \item \emph{Stability under admissibility refinement.}
-        Under spectral refinement (large-$q$ limit), admissible sectors must remain
+        Under spectral refinement (large-$q$ limit), admissible sectors are required to remain
         closed under the projection-induced transport.
-        This favours compact Lie groups with stable representation theory.
+        This working requirement motivates restricting attention to compact Lie groups; it is
+        not derived here.
     \end{enumerate}
 
-    These constraints do not uniquely determine the full gauge group, but they
-    identify $\mathrm{U}(1)$ as the residual phase symmetry (constraint (i)),
-    $\mathrm{SU}(2)$ as the minimal non-abelian admissible sector (constraint (ii)),
-    and suggest $\mathrm{SU}(3)$ as a higher-dimensional extension compatible with
-    fibre-preserving actions (constraint (iii), open).
+    These inputs do not determine the gauge group.
+    $\mathrm{U}(1)$ is the residual phase symmetry (§\ref{subsec:identification}); the
+    non-abelian part is $\mathrm{SU}(2)$ only on the supplied carrier of input~(ii)
+    (Proposition~\ref{thm:su2-rigidity}); $\mathrm{SU}(3)$ remains a hypothesis.
 
   \subsection{Identification of the gauge groups}
+    \label{subsec:identification}
 
-    The three candidates are identified as follows.
+    The three groups enter with different statuses.
 
     \begin{itemize}
       \item \emph{$\mathrm{U}(1)$}: global phase rotations
       $\omega \mapsto e^{i\theta}\omega$ within the complex fibre $\mathbb{C}^q$.
-      These preserve $|\omega|$ and hence the observable norm, while acting
-      non-trivially on the phase --- which is in the kernel of $\Pi_n$ by the phase
-      invariance of $\sigma_c(n)$~\cite{Beau2026a16}.
+      They act as a global scalar, which leaves every span of fibre vectors unchanged, and
+      hence every capacity profile defined from such spans~\cite{Beau2026a16}; the global
+      phase is therefore not resolved by these observables, while the rotation acts
+      non-trivially on the configuration.
 
-      \item \emph{$\mathrm{SU}(2)$}: the stable fixed point of the admissibility
-      flow established in~\cite{Beau2026q2} Theorem~8.1.
-      Its fibre-preserving action on $\mathbb{C}^2$ is the spin-$\tfrac{1}{2}$
-      structure derived in~\cite{Beau2026q1}.
-      Its identification as the \emph{unique} minimal non-abelian admissible group is
-      established as Theorem~\ref{thm:su2-rigidity} below.
+      \item \emph{$\mathrm{SU}(2)$}: the group acting faithfully on the spinor carrier
+      $V_\rho \cong \mathbb{C}^2$ supplied conditionally by O23~\cite{Beau2026a27}, under the
+      neutral-sector hypothesis of O27~\cite{Beau2026a31}
+      (Proposition~\ref{thm:su2-rigidity}).
+      The carrier is an input; its selection is open.
 
-      \item \emph{$\mathrm{SU}(3)$}: a structurally motivated candidate for a
-      higher-dimensional internal symmetry of the fibre, corresponding to multiple
-      co-admissible internal directions beyond $\mathrm{SU}(2)$.
-      Its identification from the O-series admissibility data is an open direction
-      (Section~\ref{sec:open}).
+      \item \emph{$\mathrm{SU}(3)$}: a structural hypothesis for a higher-dimensional
+      internal symmetry of the fibre, corresponding to several co-admissible internal
+      directions beyond the $\mathrm{SU}(2)$ carrier.
+      Its identification is an open direction (Section~\ref{sec:open}).
     \end{itemize}
 
     \begin{remark}[Status of $\mathrm{SU}(3)$]
         The identification of $\mathrm{SU}(3)$ as a gauge group is a structural
         hypothesis, not a derived result.
-        Establishing it would require finding, within the O-series spectral data, a
-        co-admissibility pattern for a group with $\mathrm{SU}(3)$ structure analogous
-        to the $\lambda_{1/2} = \lambda_{3/2}$ co-admissibility of~\cite{Beau2026q2}.
-        This is identified as a medium-term open direction.
+        Establishing it would require a carrier, supplied or derived, on which a group with
+        $\mathrm{SU}(3)$ structure acts within the admissible fibre, together with an
+        independent selection argument.
+        A spectral degeneracy between representation sectors would not suffice: the exact
+        degeneracy $\lambda_{1/2} = \lambda_{3/2}$ on the binary icosahedral group is a fact
+        about the group and its generating set and carries no selection content on its
+        own~\cite{Beau2026q2}.
     \end{remark}
 
-  \subsection{Rigidity of the minimal non-abelian sector}
+  \subsection{The non-abelian sector on a supplied carrier}
     \label{subsec:su2-rigidity}
 
-    \begin{theorem}[Minimal admissible gauge sector]
+    \begin{proposition}[Non-abelian sector on a supplied carrier]
       \label{thm:su2-rigidity}
-      Under Axioms~A1--A3 and Born\textendash Infeld parity, the unique minimal
-      non-abelian compact Lie group compatible with admissible non-injective
-      projection is $\mathrm{SU}(2)$.
-    \end{theorem}
+      Assume Axioms~A1--A3 and Born\textendash Infeld parity, together with:
+      \begin{enumerate}[(H1)]
+        \item the admissible neutral sector is carried by an irreducible two-dimensional
+        $\mathrm{SU}(2)$-valued representation $V_\rho \cong \mathbb{C}^2$, as supplied
+        conditionally by O23~\cite{Beau2026a27};
+        \item the image of the admissible projection is the neutral traceless part of the
+        ambient observable space, $\mathrm{Im}\,\Pi_{\mathrm{adm}} = \mathrm{Ntrl}$, as assumed
+        in O27~\cite{Beau2026a31}.
+      \end{enumerate}
+      Then the effective neutral sector $H_{\mathrm{eff}} = \mathrm{Im}\,\Pi_{\mathrm{adm}} \cap
+      \mathrm{Ntrl}$ is isomorphic to $\mathfrak{su}(2) \cong \mathrm{Im}\,\mathbb{H}$, and the
+      connected compact Lie group with this Lie algebra that acts faithfully on $V_\rho$ is
+      $\mathrm{SU}(2)$.
+      Hypotheses (H1) and (H2) are load-bearing; neither is a consequence of A1--A3.
+    \end{proposition}
 
-    \begin{proof}[Structural argument]
-        Axiom~A3 (Born\textendash Infeld admissibility) forbids factorisation of the
-        fibre, enforcing a non-trivial commutator structure on the admissible algebra.
-        By Foundation Theorem~5.6~\cite{Beau2026m}, the admissible fibre $F_n$ is
-        identified with the Weil representation $V_\rho$ of
-        $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$.
-        In the continuous admissible limit, given the supplied spinor carrier
-        $V_\rho \cong \mathbb{C}^2$, the neutral-sector result of O23~\cite{Beau2026a27}
-        (Theorem~3.1) places the image of any admissible morphism in
-        $\mathrm{Im}\,\mathbb{H}$, the imaginary part of the quaternion algebra; the
-        selection of that carrier is an open bridge of O23.
-        This three-dimensional space is isomorphic to the Lie algebra
-        $\mathfrak{su}(2)$.
-        By the quaternionic rigidity established in O27~\cite{Beau2026a31}, any admissible
-        morphism satisfying the three structural constraints of that paper necessarily
-        factors through $\mathfrak{su}(2)$.
-        Exponentiation yields $\mathrm{SU}(2)$ as the unique minimal non-abelian
-        compact group.
-        Among compact Lie groups, minimality forces a simple rank-one group; the only
-        such group compatible with the quaternionic constraint is $\mathrm{SU}(2)$.
+    \begin{proof}
+        By O23~\cite{Beau2026a27} (Theorem~3.1), under (H1) the traceless neutral sector of
+        $V_\rho$ is $\mathfrak{su}(2) \cong \mathrm{Im}\,\mathbb{H}$, of real dimension three.
+        By O27~\cite{Beau2026a31}, an admissible morphism satisfying the three constraints of that
+        paper factors uniquely and real-linearly through the admissible quotient; under (H2)
+        that quotient reaches $H_{\mathrm{eff}}$, and O23's dimension count transfers to it, so
+        $H_{\mathrm{eff}} \cong \mathfrak{su}(2)$.
+        The connected compact Lie groups with Lie algebra $\mathfrak{su}(2)$ are
+        $\mathrm{SU}(2)$ and $\mathrm{SO}(3)$.
+        Only $\mathrm{SU}(2)$ acts faithfully on the two-dimensional $V_\rho$, since the
+        irreducible two-dimensional representation of $\mathfrak{su}(2)$ does not descend to
+        $\mathrm{SO}(3)$.
     \end{proof}
 
-    \begin{remark}
-      Theorem~\ref{thm:su2-rigidity} is not a phenomenological selection:
-      $\mathrm{SU}(2)$ is the output of the admissibility constraints given the supplied
-      spinor carrier, not a candidate chosen to match observations; the carrier selection
-      itself is an open bridge (O23).
-      The full details of the rigidity argument are established
-      in~\cite{Beau2026a27,Beau2026a31}.
+    \begin{remark}[Status of Proposition~\ref{thm:su2-rigidity}]
+      Proposition~\ref{thm:su2-rigidity} is a consistency statement: the group is read off a
+      carrier that is $\mathrm{SU}(2)$-valued by hypothesis~(H1).
+      It does not select $\mathrm{SU}(2)$ among admissible gauge groups, and no result used here
+      establishes that $\mathrm{SU}(2)$ is the unique or minimal non-abelian group compatible
+      with admissible non-injective projection
+      (Remark~\ref{rem:no-quaternionic-forcing}).
+      The carrier selection is open in O23~\cite{Beau2026a27}, and hypothesis~(H2) is assumed
+      and derived nowhere~\cite{Beau2026a31}.
+    \end{remark}
+
+    \begin{remark}[The definition does not force a quaternionic group]
+      \label{rem:no-quaternionic-forcing}
+      No input above forces the non-abelian part of $\mathcal{G}$ into the unit quaternions.
+      If $\mathrm{Aut}(\Omega_n^{(c)})$ contains the permutations of a fibre with at least three
+      points, $\mathcal{G}$ contains the symmetric group $\mathfrak{S}_3$, which does not embed
+      in $\mathrm{SU}(2)$: the only element of order two in $\mathrm{SU}(2)$ is $-I$, whereas
+      $\mathfrak{S}_3$ has three.
+      The restriction to $\mathrm{SU}(2)$ in Proposition~\ref{thm:su2-rigidity} is therefore a
+      consequence of the supplied carrier, not of Definition~\ref{def:gauge-group}.
     \end{remark}
 
   \section{The Gauge Connection}
@@ -277,11 +304,12 @@
     First, the admissible fibre $F_n$ admits an effective continuum description
     in which it forms a smooth fibre bundle over an effective spacetime manifold.
     Second, this manifold itself carries a differentiable structure, which requires
-    the emergence of a continuum geometry from the discrete admissibility filter ---
-    a step established only conditionally in~\cite{Beau2026q5a} and not proved here.
-    Neither hypothesis is an axiom of the present framework; both are working
-    assumptions whose justification is deferred to~\cite{Beau2026q5a} and a companion paper
-    on effective geometry.
+    the emergence of a spatial continuum from the discrete admissibility filter.
+    That emergence is open: on a supplied Heisenberg carrier the canonical filtration of the
+    fibre is a growing Fourier window, and no common scalar normalisation of the published
+    admissibility form yields a non-trivial toric differential operator~\cite{Beau2026q5a}.
+    Neither hypothesis is an axiom of the present framework or a result of the programme;
+    both are working assumptions.
     All results in §\ref{sec:connection}--\ref{sec:ym} are therefore conditional
     on these two hypotheses.
 
@@ -359,14 +387,18 @@
     \end{proof}
 
     \begin{remark}[Relation to the holonomy argument]
-        The white paper~\cite{Cosmochrony} establishes that non-injective admissible
-        projections generically have non-trivial holonomy, which is the minimal
-        structural condition for a gauge symmetry to arise as a descriptive invariance.
-        Proposition~\ref{prop:connection-admissibility} is the local infinitesimal
-        version of this global statement.
+        The white paper~\cite{Cosmochrony} shows that admissible injective projections carry
+        trivial holonomy, so that non-trivial holonomy, the minimal structural condition for a
+        gauge symmetry to arise as a descriptive invariance, requires non-injectivity; on a
+        minimal model it illustrates how admissibility constraints produce a non-contractible
+        loop in the space of admissible configurations.
+        Proposition~\ref{prop:connection-admissibility} is the local infinitesimal counterpart
+        of this setting.
+        Neither statement establishes non-trivial holonomy for a given non-injective
+        projection.
     \end{remark}
 
-  \section{Yang\textendash Mills Dynamics}
+  \section{Curvature and the Yang\textendash Mills Action}
   \label{sec:ym}
 
   \subsection{Curvature as obstruction to fibre consistency}
@@ -394,19 +426,20 @@
     structure; non-zero curvature signals inconsistency in the transport of admissible
     configurations.
 
-  \subsection{Yang\textendash Mills action from admissibility minimisation}
+  \subsection{The Yang\textendash Mills action as a structural motivation}
 
-    \paragraph{Structural origin of Yang\textendash Mills-type dynamics.}
+    \paragraph{Structural motivation for Yang\textendash Mills-type dynamics.}
       The admissibility principle (A3 of~\cite{Beau2026m}) favours configurations
       that preserve the full multiplicity of open directions without premature
       selection.
-      Translated to the gauge connection, this principle selects configurations that
-      minimise the obstruction to consistent fibre transport, i.e.\ minimise the
-      curvature $\|F_{\mu\nu}\|^2$.
+      Translated to the gauge connection, this principle is read as favouring configurations
+      that minimise the obstruction to consistent fibre transport, i.e.\ minimise the
+      curvature $\|F_{\mu\nu}\|^2$; this reading is a motivation, not a consequence of A3.
 
       The Cosmochrony-specific contribution is the identification of $F_{\mu\nu}$ as
-      the natural curvature object: it follows from the non-injectivity of $\Pi$
-      (via fibre transport, §\ref{subsec:transport}) without postulating a gauge field.
+      the natural curvature object: under the continuum hypotheses of §\ref{sec:connection}, it
+      follows from the non-injectivity of $\Pi$ (via fibre transport, §\ref{subsec:transport})
+      without postulating a gauge field.
       The subsequent step --- that the unique second-order gauge-invariant
       Lorentz-invariant functional of $F_{\mu\nu}$ is $\int\mathrm{Tr}(F_{\mu\nu}
   F^{\mu\nu})$ --- is a standard result of gauge theory, not specific to the
@@ -428,36 +461,44 @@
         require the Cosmochrony framework.
         What the framework contributes is the non-postulated origin of $F_{\mu\nu}$
         itself.
-        A direct derivation of~\eqref{eq:ym-action} from the axioms via the
-        Born\textendash Infeld limit is discussed in~\cite{Beau2026c}; derivation from
-        Axioms~A1--A4 alone remains open (Section~\ref{sec:open}).
+        The Born\textendash Infeld capacity paper~\cite{Beau2026c} does not supply this step:
+        it leaves the relational construction of an antisymmetric gauge curvature as an open
+        problem.
+        A derivation of~\eqref{eq:ym-action} from Axioms~A1--A4 is open
+        (Section~\ref{sec:open}).
       \end{remark}
 
   \section{Open Directions}
   \label{sec:open}
 
-  \paragraph{Direct derivation of Yang\textendash Mills uniqueness.}
+  \paragraph{Derivation of the Yang\textendash Mills action.}
     Remark~\ref{rem:ym-action} gives a structural motivation for the
     Yang\textendash Mills action.
-    Its uniqueness --- that $S_{\mathrm{YM}}$ is the \emph{only}
-    admissibility-compatible second-order action --- follows from the
-    Born\textendash Infeld limit~\cite{Beau2026c} but not yet from Foundation~M
-    axioms alone.
+    Beyond the standard power-counting argument, neither its uniqueness among
+    admissibility-compatible actions nor its derivation from Axioms~A1--A4 is established; the relational construction of an
+    antisymmetric curvature two-form is itself open~\cite{Beau2026c}.
+
+  \paragraph{Carrier selection.}
+    The $\mathrm{SU}(2)$ sector of Proposition~\ref{thm:su2-rigidity} rests on a supplied carrier
+    and on the hypothesis $\mathrm{Im}\,\Pi_{\mathrm{adm}} = \mathrm{Ntrl}$.
+    Selecting the carrier~\cite{Beau2026a27} and deriving that hypothesis~\cite{Beau2026a31} are
+    open.
 
   \paragraph{$\mathrm{SU}(3)$ from admissibility.}
-    The identification of $\mathrm{SU}(3)$ as a gauge group requires finding a
-    co-admissibility pattern for an $\mathrm{SU}(3)$-type group in the O-series
-    spectral data.
-    The analogue of the $\lambda_{1/2} = \lambda_{3/2}$ result on $2I$ (established
-    in~\cite{Beau2026q2}) must be found for a group with $\mathrm{SU}(3)$ structure.
+    The identification of $\mathrm{SU}(3)$ as a gauge group requires a carrier, supplied or
+    derived, on which an $\mathrm{SU}(3)$-type group acts within the admissible fibre, together
+    with a selection argument; spectral degeneracies alone do not supply it.
+
+  \paragraph{Spatial continuum.}
+    The second continuum hypothesis of Section~\ref{sec:connection} is the open spatial
+    continuum question of~\cite{Beau2026q5a}.
 
   \paragraph{Coupling constants.}
-    The present paper identifies which gauge groups are admissible.
-    It does not determine the numerical values of coupling constants
-    ($g_s$, $g_w$, $\alpha$).
-    These are expected to emerge from the quantitative spectral data of the O-series
-    via the transfer chain $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}} \to \beta^* \approx 0.126$,
-    but the explicit identification is open.
+    The present paper does not determine the numerical values of coupling constants
+    ($g_s$, $g_w$, $\alpha$), and no result of the programme determines them.
+    In particular, the quantity $\beta^*$ of the spectral programme has no native carrier on the
+    Heisenberg substrate~\cite{Beau2026a31}, so no transfer from spectral data to a coupling is
+    available.
 
   \section*{Acknowledgements}
 
