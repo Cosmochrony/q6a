@@ -37,7 +37,8 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
     Gauge charges are defined as invariants of the projection fibres: two configurations are
     gauge-equivalent when they project to the same observable state.
     The group of fibre-preserving transformations is the gauge group.
-    $\mathrm{U}(1)$ arises as the residual global phase symmetry.
+    $\mathrm{U}(1)$ arises as the residual global phase symmetry when the projection is defined through
+    span-based observables.
     On the spinor carrier $V_\rho \cong \mathbb{C}^2$ supplied conditionally by paper O23, and
     under the neutral-sector hypothesis of paper O27, the non-abelian sector is $\mathfrak{su}(2)$
     and the group acting faithfully on the carrier is $\mathrm{SU}(2)$.
@@ -85,7 +86,8 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
   \subsection*{What is and is not derived in this paper}
 
     The paper defines gauge charges and the gauge group from the fibre structure of a
-    non-injective projection, and identifies the residual phase symmetry $\mathrm{U}(1)$.
+    non-injective projection, and identifies the residual phase symmetry $\mathrm{U}(1)$ when the projection
+    is defined through span-based observables.
     It does not select the gauge group.
     Its non-abelian part is read off a carrier that is supplied, not derived: on the spinor
     carrier of~\cite{Beau2026a27}, and under the neutral-sector hypothesis of~\cite{Beau2026a31},
@@ -199,7 +201,7 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
     \end{enumerate}
 
     These inputs do not determine the gauge group.
-    $\mathrm{U}(1)$ is the residual phase symmetry (§\ref{subsec:identification}); the
+    $\mathrm{U}(1)$ is the residual phase symmetry when $\Pi_n$ is span-based (§\ref{subsec:identification}); the
     non-abelian part is $\mathrm{SU}(2)$ only on the supplied carrier of input~(ii)
     (Proposition~\ref{thm:su2-rigidity}); $\mathrm{SU}(3)$ remains a hypothesis.
 
@@ -446,10 +448,10 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
       the natural curvature object: under the continuum hypotheses of §\ref{sec:connection}, it
       follows from the non-injectivity of $\Pi$ (via fibre transport, §\ref{subsec:transport})
       without postulating a gauge field.
-      The subsequent step --- that the unique parity-even, second-order, gauge-invariant and
-      Lorentz-invariant local functional of $F_{\mu\nu}$ is $\int\mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})$,
-      up to the topological term $\int\mathrm{Tr}(F_{\mu\nu}\tilde F^{\mu\nu})$ --- is a standard result of
-      gauge theory, not specific to the
+      The subsequent step --- that, among local gauge-invariant, Lorentz-invariant and parity-even
+      functionals of $F_{\mu\nu}$ with at most two derivatives, the action is
+      $\int\mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})$ up to one coupling per simple or abelian factor --- is a
+      standard result of gauge theory, not specific to the
       present framework.
 
       \begin{remark}[Yang\textendash Mills action]
@@ -464,8 +466,8 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
         whose variation yields the Yang\textendash Mills equations $D_\mu F^{\mu\nu} = 0$.
         This is a structural motivation, not a derivation from Axioms~A1--A4 alone.
         The uniqueness of~\eqref{eq:ym-action} follows from standard EFT power-counting
-        (second order in $A_\mu$, gauge-invariant, Lorentz-invariant, parity-even, up to the topological
-        term); it does not
+        (at most two derivatives, gauge-invariant, Lorentz-invariant, parity-even; up to one coupling per
+        simple or abelian factor); it does not
         require the Cosmochrony framework.
         What the framework contributes is the non-postulated origin of $F_{\mu\nu}$
         itself.

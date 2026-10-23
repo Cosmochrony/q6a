@@ -1,7 +1,8 @@
 # Toward Gauge Structure from Non-Injective Projection (Q6a)
 
 This repository contains the source of the **Q6a Cosmochrony paper**
-*Toward Gauge Structure from Non-Injective Projection: Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection*.
+*Toward Gauge Structure from Non-Injective Projection: Fibre-Invariant Charges, a Supplied SU(2)
+Carrier, and a Conditional Connection*.
 
 Starting from the axioms of admissible non-injective transitions (Foundation paper M),
 the paper sets out the gauge-theoretic structures that the fibres of a non-injective
@@ -10,10 +11,11 @@ remain open. It determines neither the gauge group nor Yang–Mills dynamics.
 
 ## Results
 
-- **Gauge charges** are defined as invariants of the projection fibres: two configurations are gauge-equivalent when they project to the
-  same observable state.
+- **Gauge charges** are defined as invariants of the projection fibres: two
+  configurations are gauge-equivalent when they project to the same observable state.
 - **The gauge group** is the group of fibre-preserving transformations.
-- \(\mathrm{U}(1)\) arises as the residual global phase symmetry.
+- \(\mathrm{U}(1)\) arises as the residual global phase symmetry when the projection is
+  defined through span-based observables.
 - On the spinor carrier \(V_\rho \cong \mathbb{C}^2\) supplied conditionally by O23, and
   under the neutral-sector hypothesis \(\mathrm{Im}\,\Pi_{\mathrm{adm}} = \mathrm{Ntrl}\) of
   O27, the non-abelian sector is \(\mathfrak{su}(2)\) and the group acting faithfully on
@@ -53,7 +55,8 @@ q6a/
 
 ## Citation
 
-> J. Beau, *Toward Gauge Structure from Non-Injective Projection: Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection*, Zenodo, 2026.
+> J. Beau, *Toward Gauge Structure from Non-Injective Projection: Fibre-Invariant Charges, a
+> Supplied SU(2) Carrier, and a Conditional Connection*, Zenodo, 2026.
 > DOI: [10.5281/zenodo.19655294](https://doi.org/10.5281/zenodo.19655294)
 
 ## Links
