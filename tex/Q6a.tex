@@ -6,6 +6,8 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{enumerate}
 \usepackage{hyperref}
+\hypersetup{pdftitle={Toward Gauge Structure from Non-Injective Projection: Fibre-Invariant Charges, a Supplied SU(2)
+  Carrier, and a Conditional Connection}, pdfauthor={J\'er\^ome Beau}}
 \usepackage{doi}
 
 \newtheorem{theorem}{Theorem}[section]
@@ -46,9 +48,9 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
     Under two continuum hypotheses that are not proved, the second of which is the open spatial
     continuum question of paper Q5a, the gauge connection is the infinitesimal generator of fibre
     transport, and its curvature measures the failure of transport around infinitesimal loops.
-    The Yang\textendash Mills action is a structural motivation on this curvature, not a
+    The Yang--Mills action is a structural motivation on this curvature, not a
     derivation from the axioms.
-    The paper determines neither the gauge group nor Yang\textendash Mills dynamics; it locates
+    The paper determines neither the gauge group nor Yang--Mills dynamics; it locates
     where each would enter.
   \end{abstract}
 
@@ -213,6 +215,8 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
       hence every capacity profile defined from such spans~\cite{Beau2026a16}; the global
       phase is therefore not resolved by these observables, while the rotation acts
       non-trivially on the configuration.
+      The rotations belong to $\mathcal{G}$ to the extent that $\Pi_n$ is defined through such
+      span-based observables.
 
       \item \emph{$\mathrm{SU}(2)$}: the group acting faithfully on the spinor carrier
       $V_\rho \cong \mathbb{C}^2$ supplied conditionally by O23~\cite{Beau2026a27}, under the
@@ -243,7 +247,7 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
 
     \begin{proposition}[Non-abelian sector on a supplied carrier]
       \label{thm:su2-rigidity}
-      Assume Axioms~A1--A3 and Born\textendash Infeld parity, together with:
+      Assume Axioms~A1--A3, together with:
       \begin{enumerate}[(H1)]
         \item the admissible neutral sector is carried by an irreducible two-dimensional
         $\mathrm{SU}(2)$-valued representation $V_\rho \cong \mathbb{C}^2$, as supplied
@@ -260,8 +264,9 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
     \end{proposition}
 
     \begin{proof}
-        By O23~\cite{Beau2026a27} (Theorem~3.1), under (H1) the traceless neutral sector of
-        $V_\rho$ is $\mathfrak{su}(2) \cong \mathrm{Im}\,\mathbb{H}$, of real dimension three.
+        By O23~\cite{Beau2026a27} (Theorem~3.1), under (H1) the traceless part of the neutral
+        sector carried by $V_\rho$, inside $\mathrm{End}(V_\rho)$, is
+        $\mathfrak{su}(2) \cong \mathrm{Im}\,\mathbb{H}$, of real dimension three.
         By O27~\cite{Beau2026a31}, an admissible morphism satisfying the three constraints of that
         paper factors uniquely and real-linearly through the admissible quotient; under (H2)
         that quotient reaches $H_{\mathrm{eff}}$, and O23's dimension count transfers to it, so
@@ -306,8 +311,9 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
     Second, this manifold itself carries a differentiable structure, which requires
     the emergence of a spatial continuum from the discrete admissibility filter.
     That emergence is open: on a supplied Heisenberg carrier the canonical filtration of the
-    fibre is a growing Fourier window, and no common scalar normalisation of the published
-    admissibility form yields a non-trivial toric differential operator~\cite{Beau2026q5a}.
+    fibre is a growing Fourier window, and, under that paper's conditions on the saturation depth and
+    the weights, no common scalar normalisation of the published admissibility form yields a
+    non-trivial toric differential operator~\cite{Beau2026q5a}.
     Neither hypothesis is an axiom of the present framework or a result of the programme;
     both are working assumptions.
     All results in §\ref{sec:connection}--\ref{sec:ym} are therefore conditional
@@ -440,15 +446,16 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
       the natural curvature object: under the continuum hypotheses of §\ref{sec:connection}, it
       follows from the non-injectivity of $\Pi$ (via fibre transport, §\ref{subsec:transport})
       without postulating a gauge field.
-      The subsequent step --- that the unique second-order gauge-invariant
-      Lorentz-invariant functional of $F_{\mu\nu}$ is $\int\mathrm{Tr}(F_{\mu\nu}
-  F^{\mu\nu})$ --- is a standard result of gauge theory, not specific to the
+      The subsequent step --- that the unique parity-even, second-order, gauge-invariant and
+      Lorentz-invariant local functional of $F_{\mu\nu}$ is $\int\mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})$,
+      up to the topological term $\int\mathrm{Tr}(F_{\mu\nu}\tilde F^{\mu\nu})$ --- is a standard result of
+      gauge theory, not specific to the
       present framework.
 
       \begin{remark}[Yang\textendash Mills action]
         \label{rem:ym-action}
         Under the continuum hypotheses of §\ref{sec:connection}, the minimisation
-        principle above selects the action
+        principle above is read as favouring the action
         \begin{equation}
           \label{eq:ym-action}
           S_{\mathrm{YM}}[A]
@@ -457,7 +464,8 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
         whose variation yields the Yang\textendash Mills equations $D_\mu F^{\mu\nu} = 0$.
         This is a structural motivation, not a derivation from Axioms~A1--A4 alone.
         The uniqueness of~\eqref{eq:ym-action} follows from standard EFT power-counting
-        (second order in $A_\mu$, gauge-invariant, Lorentz-invariant); it does not
+        (second order in $A_\mu$, gauge-invariant, Lorentz-invariant, parity-even, up to the topological
+        term); it does not
         require the Cosmochrony framework.
         What the framework contributes is the non-postulated origin of $F_{\mu\nu}$
         itself.
