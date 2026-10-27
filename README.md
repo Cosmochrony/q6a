@@ -11,8 +11,9 @@ remain open. It determines neither the gauge group nor Yang–Mills dynamics.
 
 ## Results
 
-- **Gauge charges** are defined as invariants of the projection fibres: two
-  configurations are gauge-equivalent when they project to the same observable state.
+- **Gauge charges** are defined as functions constant on the projection fibres. Such a
+  function factors through the projection, so it is a function of the observable state; its
+  identification with a conserved physical charge is open.
 - **The gauge group** is the group of fibre-preserving transformations.
 - \(\mathrm{U}(1)\) arises as the residual global phase symmetry when the projection is
   defined through span-based observables.
@@ -24,12 +25,22 @@ remain open. It determines neither the gauge group nor Yang–Mills dynamics.
   \(\mathrm{SU}(2)\) is the unique or minimal non-abelian group compatible with admissible
   projection, and the carrier selection is open.
 - \(\mathrm{SU}(3)\) is a structural hypothesis whose identification is open.
-- **The gauge connection** is the infinitesimal generator of fibre transport, and its
-  curvature measures the failure of transport around infinitesimal loops, under two
-  continuum hypotheses that the paper does not prove. The second, a spatial continuum,
-  is the open question left by Q5a.
+- **The gauge connection** is not derived. Two continuum hypotheses that the paper does
+  not prove (a smooth fibre bundle and a differentiable base, the second the open spatial
+  continuum question left by Q5a) do not determine a connection, so a structure group, its
+  representation and a connection are supplied. On these data the connection generates
+  parallel transport, and its curvature measures the path dependence of transport around
+  infinitesimal loops; flatness gives a path-independent identification of fibres only
+  locally.
 - **The Yang–Mills action** is a structural motivation on this curvature, not a
-  derivation from the axioms.
+  derivation from the axioms; its uniqueness is the standard result under an explicit
+  truncation (total mass dimension at most four, fixed background).
+
+*Interpretive outlook (a reading, not a result).* Gauge redundancy is read as the symmetry
+of a fibre that the observables do not resolve. The paper locates where a gauge group, a
+comparison of fibres and a dynamics would enter, and supplies none of them from
+non-injectivity: it is a dictionary and a list of missing inputs, not a derivation of gauge
+fields.
 
 Effective spacetime geometry is not addressed.
 
