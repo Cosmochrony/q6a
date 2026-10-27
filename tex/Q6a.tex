@@ -3,6 +3,10 @@
 
 \documentclass[11pt,a4paper]{article}
 
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\input{glyphtounicode}
+\pdfgentounicode=1
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{enumerate}
 \usepackage{hyperref}
@@ -10,8 +14,8 @@
   Carrier, and a Conditional Connection}, pdfauthor={J\'er\^ome Beau},
   pdfsubject={Fibre-invariant charges, a supplied SU(2) carrier and a conditional gauge connection from non-injective
   projection},
-  pdfkeywords={gauge symmetry; non-injective projection; fibre bundles; gauge invariance; Yang-Mills theory; emergent
-  gauge structure; admissibility; Heisenberg group; SU(2); quaternionic structure}}
+  pdfkeywords={gauge symmetry; non-injective projection; fibre bundles; gauge invariance; Yang\textendash Mills theory;
+  emergent gauge structure; admissibility; Heisenberg group; SU(2); quaternionic structure}}
 \usepackage{doi}
 
 \newtheorem{theorem}{Theorem}[section]
@@ -36,27 +40,25 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
 
   \begin{abstract}
     Starting from the axioms of admissible non-injective transitions of the Foundation paper, we
-    set out the gauge-theoretic structures that the fibres of a non-injective projection carry,
-    and state which of them are defined, which are conditional, and which remain open.
-    Gauge charges are defined as invariants of the projection fibres: two configurations are
-    gauge-equivalent when they project to the same observable state.
-    The group of fibre-preserving transformations is the gauge group.
-    $\mathrm{U}(1)$ arises as the residual global phase symmetry when the projection is defined through
-    span-based observables.
+    state which gauge-theoretic structures carried by the fibres of a non-injective projection are
+    defined, which are conditional, and which remain open.
+    Gauge charges are functions constant on the projection fibres; they factor through the
+    projection, so they are functions of the observable state, and their identification with
+    conserved physical charges is open.
+    The gauge group is the group of fibre-preserving transformations.
+    $\mathrm{U}(1)$ is the residual global phase symmetry of span-based observables.
     On the spinor carrier $V_\rho \cong \mathbb{C}^2$ supplied conditionally by paper O23, and
-    under the neutral-sector hypothesis of paper O27, the non-abelian sector is $\mathfrak{su}(2)$
-    and the group acting faithfully on the carrier is $\mathrm{SU}(2)$.
-    This is a consistency statement about a supplied carrier, not a selection: the paper does
-    not establish that $\mathrm{SU}(2)$ is the unique or minimal non-abelian group compatible with
-    admissible projection, and the carrier selection is open.
-    $\mathrm{SU}(3)$ is a structural hypothesis whose identification is open.
-    Under two continuum hypotheses that are not proved, the second of which is the open spatial
-    continuum question of paper Q5a, the gauge connection is the infinitesimal generator of fibre
-    transport, and its curvature measures the failure of transport around infinitesimal loops.
-    The Yang--Mills action is a structural motivation on this curvature, not a
-    derivation from the axioms.
-    The paper determines neither the gauge group nor Yang--Mills dynamics; it locates
-    where each would enter.
+    under the neutral-sector hypothesis of paper O27, the group acting faithfully on the carrier is
+    $\mathrm{SU}(2)$; this is a consistency statement about a supplied carrier, not a selection.
+    $\mathrm{SU}(3)$ is a structural hypothesis.
+    Two unproved continuum hypotheses, a smooth fibre bundle and a differentiable base, the second
+    the open spatial continuum question of paper Q5a, do not determine a connection.
+    On a supplied structure group, representation and connection, the curvature measures the path
+    dependence of transport around infinitesimal loops.
+    The Yang--Mills action is a structural motivation on this curvature, not a derivation.
+    Interpretive outlook, a reading and not a result: gauge redundancy is read as the symmetry of a
+    fibre that the observables do not resolve, and the paper locates where the group, the
+    comparison of fibres and the dynamics would enter, without supplying them.
   \end{abstract}
 
   \paragraph{Keywords.}
@@ -81,10 +83,10 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
     single transition step.
 
     The present paper addresses one macroscopic consequence of allowing the projection
-    structure to vary from point to point in the effective continuum: the conserved
-    invariants of the projection fibre and the symmetry group they generate.
+    structure to vary from point to point in the effective continuum: the invariants of the
+    projection fibre and the group of transformations that preserves the fibres.
     The answer is gauge charges and a gauge group (§\ref{sec:charges}), with a connection
-    and its curvature defined through fibre transport under stated continuum hypotheses
+    and its curvature defined on supplied transport data under stated continuum hypotheses
     (§\ref{sec:connection}--\ref{sec:ym}).
     Effective spacetime geometry is not addressed: the spatial continuum it requires is an open
     question of~\cite{Beau2026q5a}.
@@ -99,9 +101,13 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
     carrier of~\cite{Beau2026a27}, and under the neutral-sector hypothesis of~\cite{Beau2026a31},
     it is $\mathrm{SU}(2)$ (Proposition~\ref{thm:su2-rigidity}).
     $\mathrm{SU}(3)$ is a hypothesis.
-    The connection, its curvature and the Yang\textendash Mills action are conditional on two
-    continuum hypotheses that the paper does not prove, and the Yang\textendash Mills action is a
-    structural motivation, not a derivation.
+    Gauge charges are functions of the observable state; their identification with conserved
+    physical charges is not established.
+    The connection is not derived: the two continuum hypotheses that the paper states but does not
+    prove are needed for a continuum description and do not determine a connection, so a structure
+    group, its representation and a connection are supplied (§\ref{subsec:transport}).
+    The curvature and the Yang\textendash Mills action are statements on these supplied data, and
+    the Yang\textendash Mills action is a structural motivation, not a derivation.
     Coupling constants and the matter content of the Standard Model are not derived.
     These points are collected in Section~\ref{sec:open}.
 
@@ -110,11 +116,13 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
     Section~\ref{sec:charges} defines gauge charges as fibre invariants and the gauge group as
     the group of fibre-preserving transformations, and states what fixes its non-abelian part
     on a supplied carrier.
-    Section~\ref{sec:connection} defines, conditionally, the gauge connection as the
-    infinitesimal generator of fibre transport.
-    Section~\ref{sec:ym} gives the curvature of this connection and the structural motivation
-    for the Yang\textendash Mills action.
-    Section~\ref{sec:open} identifies the open directions.
+    Section~\ref{sec:connection} shows that the continuum hypotheses do not fix a connection, states
+    the supplied transport data, and defines on them the gauge connection as the infinitesimal
+    generator of parallel transport.
+    Section~\ref{sec:ym} gives the curvature of this connection, its local and global meaning, and
+    the structural motivation for the Yang\textendash Mills action.
+    Section~\ref{sec:open} identifies the open directions, and Section~\ref{sec:conclusion}
+    concludes with a labelled interpretive outlook.
 
     \clearpage
   \section{Gauge Charges as Fibre Invariants}
@@ -142,9 +150,16 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
       \end{equation}
     \end{definition}
 
-    A gauge charge is therefore an observable that cannot be resolved by $\Pi_n$
-    itself --- it lives in the kernel structure of $\Pi_n$ --- but is well-defined
-    on the fibre.
+    Every gauge charge factors through the projection.
+    On the image of $\Pi_n$, set $q(O) := Q(\omega)$ for any $\omega$ with $\Pi_n(\omega) = O$; the
+    definition makes $q$ independent of the chosen preimage, so $Q = q \circ \Pi_n$.
+    A gauge charge is therefore a function of the observable state: it is resolved by $\Pi_n$, and it
+    carries no distinction within a fibre.
+    What non-injectivity adds is the converse restriction: a functional that separates two points of
+    one fibre is not a gauge charge.
+    Fibre constancy is an invariance property.
+    It does not by itself supply a conservation law, a charge generator, a matter representation, or
+    an identification with electric, weak or colour charge; these remain open (Section~\ref{sec:open}).
 
     \begin{definition}[Gauge group]
       \label{def:gauge-group}
@@ -160,6 +175,11 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
 
     $\mathcal{G}$ consists precisely of the fibre-preserving symmetries: it acts
     within $\Pi_n^{-1}(O_n)$ without affecting the observable output.
+    Its orbits lie inside the fibres, and they exhaust a fibre only if $\mathcal{G}$ acts transitively
+    on it, for instance when $\mathrm{Aut}(\Omega_n^{(c)})$ contains every permutation of the points of
+    that fibre.
+    Equality of observable output and equivalence under $\mathcal{G}$ therefore coincide only under
+    such a transitivity condition.
 
     \begin{remark}[Gauge invariance as structural necessity]
         The gauge group is not introduced by hand.
@@ -327,21 +347,24 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
     both are working assumptions.
     All results in §\ref{sec:connection}--\ref{sec:ym} are therefore conditional
     on these two hypotheses.
+    The two hypotheses are needed for the continuum description below, but they are not sufficient
+    for it: they do not determine a connection (§\ref{subsec:transport}).
 
     For each point $x$ in the effective manifold, the fibre $F_x = \Pi^{-1}(x)$
     carries the internal gauge structure of Section~\ref{sec:charges}.
 
     When the projection $\Pi(x)$ varies from point to point, the fibres $F_x$ and
     $F_{x+dx}$ are not canonically identified.
-    A state $\psi(x)$ transforming under $\mathcal{G}$ acquires an additional term
+    A state $\psi(x)$ transforming under a local gauge transformation $g(x)$, with values in the
+    structure group $G$ of §\ref{subsec:transport}, acquires an additional term
     under differentiation:
     \begin{equation}
       \partial_\mu(g(x)\,\psi(x))
       \;=\; g(x)\,\partial_\mu\psi(x) + (\partial_\mu g(x))\,\psi(x),
     \end{equation}
-    which is not covariant under local gauge transformations $g(x) \in \mathcal{G}$.
+    which is not covariant under local gauge transformations $g(x) \in G$.
 
-  \subsection{Connection as fibre transport operator}
+  \subsection{Supplied transport data}
     \label{subsec:transport}
 
     A comparison between fibres at neighbouring points $x$ and $x + dx$
@@ -350,28 +373,57 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
       T_{x \to x+dx} : F_x \;\longrightarrow\; F_{x+dx}.
     \end{equation}
     Because the projection $\Pi$ is non-injective, there is no canonical
-    identification between fibres at distinct points.
-    The transport map is therefore defined only up to a fibre-preserving
-    transformation, i.e.\ an element of the gauge group $\mathcal{G}$.
+    identification between fibres at distinct points, and the projection does not supply one.
+    The differential of the bundle projection maps tangent vectors of the total space to tangent
+    vectors of the base: it fixes which directions are vertical, but it does not choose horizontal
+    lifts, and hence it does not identify neighbouring fibres.
+    The two continuum hypotheses therefore do not determine a transport.
+    On the trivial bundle $M \times \mathbb{C}$ over a coordinate patch, for instance, the covariant
+    derivatives $d$ and $d + i\,y^1 dy^2$, in local coordinates $(y^1, y^2)$, have the same projection
+    and the same fibres, while the first is flat and the second has curvature $i\,dy^1 \wedge dy^2$.
 
-    The gauge connection arises as the infinitesimal generator of this transport:
+    The development below therefore rests on a third input, supplied and not derived:
+    \begin{enumerate}[(T1)]
+      \item a principal bundle with a compact Lie structure group $G$, of Lie algebra $\mathfrak{g}$,
+      of which the fibre bundle is an associated bundle;
+      \item a unitary representation of $G$ on the fibre, states being local sections $\psi$ of the
+      associated vector bundle;
+      \item a connection on that principal bundle, acting on $\psi$ through the representation.
+    \end{enumerate}
+    The structure group $G$ is distinct from the group $\mathcal{G}$ of
+    Definition~\ref{def:gauge-group}, whose elements are global automorphisms of
+    $\Omega_n^{(c)}$: nothing above reduces $\mathcal{G}$ to a finite-dimensional Lie group.
+    The group read off the supplied carrier of Proposition~\ref{thm:su2-rigidity} is one possible
+    choice of $G$, not one that this paper derives.
+    A connection is the datum that assigns a holonomy to each path in the base and so defines
+    parallel transport~\cite{BaezSchreiber2007}; the same bundle and projection admit many
+    connections, as the example above shows.
+    The data (T1)--(T3) might later be constructed from additional admissibility structure; no such
+    construction is given here, and it is an open direction (Section~\ref{sec:open}).
+
+    \emph{Conventions.}
+    In a local trivialisation, write $D_\mu = \partial_\mu + A_\mu$, with $A_\mu$ anti-Hermitian
+    and $\mathfrak{g}$-valued in the representation (T2).
+    Parallel transport along a path $x(t)$ is defined by $\dot{x}^\mu D_\mu \psi = 0$, so that, to first
+    order,
     \begin{equation}
       \label{eq:transport-expansion}
       T_{x \to x+dx}
-      \;=\; \mathrm{Id} + A_\mu(x)\,dx^\mu + o(dx),
+      \;=\; \mathrm{Id} - A_\mu(x)\,dx^\mu + o(dx).
     \end{equation}
-    where $A_\mu(x)$ takes values in the Lie algebra $\mathfrak{g}$ of the gauge
-    group.
-    This definition does not rely on a background bundle structure: the connection
-    is the minimal structure required to compare admissible fibres under variation
-    of the effective state.
+    Under a local gauge transformation $\psi \mapsto g\psi$ with $g(x) \in G$, the connection
+    transforms as $A_\mu \mapsto g A_\mu g^{-1} - (\partial_\mu g)\,g^{-1}$; then
+    $D_\mu\psi \mapsto g\,D_\mu\psi$ and $T_{x \to x+dx} \mapsto g(x+dx)\,T_{x \to x+dx}\,g(x)^{-1}$
+    to first order.
+    The connection is thus the infinitesimal generator of the supplied transport; it is not forced by
+    the requirement of comparing admissible fibres.
 
   \subsection{Gauge connection from fibre transport}
 
     \begin{definition}[Gauge connection]
       \label{def:connection}
-      A \emph{gauge connection} $A_\mu$ is the $\mathfrak{g}$-valued one-form
-      appearing in~\eqref{eq:transport-expansion}, defining a covariant derivative
+      On the supplied data (T1)--(T3), a \emph{gauge connection} $A_\mu$ is the $\mathfrak{g}$-valued
+      one-form appearing in~\eqref{eq:transport-expansion}, defining a covariant derivative
       \begin{equation}
         \label{eq:covariant-derivative}
         D_\mu \;:=\; \partial_\mu + A_\mu
@@ -380,26 +432,20 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
       transformations.
     \end{definition}
 
-    \begin{proposition}[Admissibility interpretation of $A_\mu$]
+    \begin{remark}[Admissibility reading of $A_\mu$]
       \label{prop:connection-admissibility}
-      In the projection framework, $A_\mu(x)$ encodes the local variation of the
-      admissible fibre structure: it is the infinitesimal correction needed to
-      transport an admissible configuration from the fibre at $x$ to the fibre at
-      $x + dx$ consistently with the admissibility constraints.
-    \end{proposition}
-
-    \begin{proof}[Structural argument]
-        The admissibility constraints (A1--A3 of~\cite{Beau2026m}) define, at each
-        point $x$, a fibre $F_x$ of structurally compatible configurations.
-        When $\Pi(x)$ varies, the fibres $F_x$ and $F_{x+dx}$ are related by the
-        differential of the projection map.
-        Consistency of the admissibility condition across neighbouring fibres ---
-        i.e.\ that a configuration admissible at $x$ maps to an admissible
-        configuration at $x + dx$ --- requires a linear correction of the form
-        $A_\mu(x)\,dx^\mu$ taking values in $\mathfrak{g}$.
-        This correction is precisely the gauge connection of
-        Definition~\ref{def:connection}.
-    \end{proof}
+      In the projection framework, $A_\mu(x)$ is read as encoding the local variation of the
+      admissible fibre structure: the infinitesimal correction that the supplied transport applies to
+      an admissible configuration when it is carried from the fibre at $x$ to the fibre at $x + dx$.
+      This is an interpretation, not a result.
+      It requires that the supplied transport map admissible configurations to admissible
+      configurations, which is a further condition on (T1)--(T3); it is not derived from the
+      admissibility constraints (A1--A3 of~\cite{Beau2026m}).
+      Those constraints define, at each point $x$, a fibre $F_x$ of structurally compatible
+      configurations, but they neither select a connection nor single out a linear correction
+      $A_\mu(x)\,dx^\mu$: the differential of the projection relates base directions, not fibres
+      (§\ref{subsec:transport}).
+    \end{remark}
 
     \begin{remark}[Relation to the holonomy argument]
         The white paper~\cite{Cosmochrony} shows that admissible injective projections carry
@@ -407,8 +453,8 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
         gauge symmetry to arise as a descriptive invariance, requires non-injectivity; on a
         minimal model it illustrates how admissibility constraints produce a non-contractible
         loop in the space of admissible configurations.
-        Proposition~\ref{prop:connection-admissibility} is the local infinitesimal counterpart
-        of this setting.
+        The reading of Remark~\ref{prop:connection-admissibility} is the local infinitesimal
+        counterpart of this setting, on supplied transport data.
         Neither statement establishes non-trivial holonomy for a given non-injective
         projection.
     \end{remark}
@@ -416,10 +462,10 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
   \section{Curvature and the Yang\textendash Mills Action}
   \label{sec:ym}
 
-  \subsection{Curvature as obstruction to fibre consistency}
+  \subsection{Curvature as path dependence of transport}
 
     Given the transport map of §\ref{subsec:transport}, consider two infinitesimal
-    displacements $dx^\mu$ and $dx^\nu$ from a point $x$.
+    displacements $\delta x$ and $\delta' x$ from a point $x$.
     The failure of successive transports along these directions to commute defines
     the curvature of the connection.
 
@@ -434,12 +480,24 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
       \end{equation}
     \end{definition}
 
-    $F_{\mu\nu}$ measures the obstruction to consistent identification of admissible
-    fibres over infinitesimal loops --- equivalently, the non-commutativity of the
-    admissibility constraints in two neighbouring directions.
-    A flat connection ($F_{\mu\nu} = 0$) corresponds to a globally consistent fibre
-    structure; non-zero curvature signals inconsistency in the transport of admissible
-    configurations.
+    $F_{\mu\nu}$ measures the path dependence of the supplied transport around infinitesimal loops:
+    transport around the small parallelogram spanned by two displacements $\delta x$ and $\delta' x$
+    differs from the identity by a term proportional to $F_{\mu\nu}\,\delta x^\mu\,\delta' x^\nu$.
+    Curvature is not a failure of admissibility.
+    A curved connection transports configurations consistently along each path; what it does not
+    provide is an identification of distant fibres independent of the path.
+    The paper constructs no admissibility constraint operators, so it does not identify $F_{\mu\nu}$
+    with a non-commutativity of admissibility constraints; that identification would require those
+    operators and their relation to $D_\mu$, and it is open.
+
+    Vanishing curvature has a local meaning only.
+    A flat connection ($F_{\mu\nu} = 0$) gives a path-independent identification of fibres over a
+    simply connected region; globally, it can still have a non-trivial holonomy around a
+    non-contractible loop~\cite{TongGauge}.
+    On the circle, for instance, the connection $A = i\alpha\,d\theta$ with a constant real $\alpha$ is
+    flat; with the convention~\eqref{eq:transport-expansion}, its holonomy is $e^{-2\pi i\alpha}$, which
+    is non-trivial for every non-integer $\alpha$.
+    A flat connection therefore does not by itself give a globally path-independent fibre structure.
 
   \subsection{The Yang\textendash Mills action as a structural motivation}
 
@@ -448,36 +506,60 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
       that preserve the full multiplicity of open directions without premature
       selection.
       Translated to the gauge connection, this principle is read as favouring configurations
-      that minimise the obstruction to consistent fibre transport, i.e.\ minimise the
+      that minimise the path dependence of fibre transport, i.e.\ minimise the
       curvature $\|F_{\mu\nu}\|^2$; this reading is a motivation, not a consequence of A3.
 
-      The Cosmochrony-specific contribution is the identification of $F_{\mu\nu}$ as
-      the natural curvature object: under the continuum hypotheses of §\ref{sec:connection}, it
-      follows from the non-injectivity of $\Pi$ (via fibre transport, §\ref{subsec:transport})
-      without postulating a gauge field.
-      The subsequent step --- that, among local gauge-invariant, Lorentz-invariant and parity-even
-      functionals of $F_{\mu\nu}$ with at most two derivatives, the action is
-      $\int\mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})$ up to one coupling per simple or abelian factor --- is a
-      standard result of gauge theory, not specific to the
-      present framework.
+      On the supplied data (T1)--(T3), $F_{\mu\nu}$ is the curvature of the supplied connection.
+      The paper does not derive $F_{\mu\nu}$ from the non-injectivity of $\Pi$, since the continuum
+      hypotheses do not determine the connection (§\ref{subsec:transport}).
+      What non-injectivity contributes is the setting: fibres without a canonical identification
+      across points, in which a connection is needed; it does not supply the connection.
+
+      The subsequent step is a standard result of gauge theory, not specific to the present
+      framework, and it holds under an explicit truncation.
+      On a fixed four-dimensional Lorentzian background, consider local Lagrangians that are
+      gauge-invariant, Lorentz-invariant and parity-even, built from $F_{\mu\nu}$ and its covariant
+      derivatives, of total mass dimension at most four, equivalently with at most two derivatives of
+      $A_\mu$ in total.
+      Apart from a constant, the only such term is an invariant quadratic form on $\mathfrak{g}$
+      evaluated on $F_{\mu\nu}$ and $F^{\mu\nu}$.
+      The truncation excludes higher powers such as $(F_{\mu\nu}F^{\mu\nu})^2$, whose field equations are
+      of second order but which carry four derivatives in total.
+      For a compact $\mathfrak{g}$ that is a sum of simple and abelian factors, the quadratic invariant
+      is fixed up to one coefficient per simple factor and a symmetric matrix on the abelian factors,
+      which allows kinetic mixing; requiring positive energy makes the coefficients positive and the
+      matrix positive-definite.
+      An orthogonal change of basis of the abelian factors diagonalises that matrix and leaves one
+      coupling per abelian factor; when a charge normalisation fixes the basis instead, the
+      off-diagonal kinetic-mixing entries are additional couplings.
+      With these qualifications, the action is $\int\mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})$ with one coupling
+      per simple factor and, in a diagonalising basis, one per abelian factor.
 
       \begin{remark}[Yang\textendash Mills action]
         \label{rem:ym-action}
-        Under the continuum hypotheses of §\ref{sec:connection}, the minimisation
+        On the supplied data (T1)--(T3) of §\ref{subsec:transport}, and under the continuum hypotheses
+        of §\ref{sec:connection}, the minimisation
         principle above is read as favouring the action
         \begin{equation}
           \label{eq:ym-action}
           S_{\mathrm{YM}}[A]
           \;=\; \int \mathrm{Tr}\bigl(F_{\mu\nu} F^{\mu\nu}\bigr)\,\sqrt{-g}\,d^4x,
         \end{equation}
-        whose variation yields the Yang\textendash Mills equations $D_\mu F^{\mu\nu} = 0$.
+        whose variation yields the Yang\textendash Mills equations $D_\mu F^{\mu\nu} = 0$~\cite{YangMills1954},
+        where $D_\mu$ includes the Levi-Civita connection of $g$.
+        Here $\mathrm{Tr}$ is the trace in the representation (T2), negative-definite on the
+        anti-Hermitian algebra $\mathfrak{g}$; a positive coupling per factor, required by positive
+        energy, is understood
+        in~\eqref{eq:ym-action}, the metric $g$ is a fixed background, and the variation is taken over
+        connections with compactly supported variations, so that boundary terms vanish.
         This is a structural motivation, not a derivation from Axioms~A1--A4 alone.
-        The uniqueness of~\eqref{eq:ym-action} follows from standard EFT power-counting
-        (at most two derivatives, gauge-invariant, Lorentz-invariant, parity-even; up to one coupling per
-        simple or abelian factor); it does not
+        The uniqueness of~\eqref{eq:ym-action} holds under the truncation stated above (total mass
+        dimension at most four, gauge-invariant, Lorentz-invariant, parity-even; one coupling per
+        simple factor and, in a basis that diagonalises the abelian kinetic matrix, per abelian factor);
+        it does not
         require the Cosmochrony framework.
-        What the framework contributes is the non-postulated origin of $F_{\mu\nu}$
-        itself.
+        The framework does not supply $F_{\mu\nu}$ itself either: it is the curvature of the supplied
+        connection of §\ref{subsec:transport}.
         The Born\textendash Infeld capacity paper~\cite{Beau2026c} does not supply this step:
         it leaves the relational construction of an antisymmetric gauge curvature as an open
         problem.
@@ -495,6 +577,18 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
     admissibility-compatible actions nor its derivation from Axioms~A1--A4 is established.
     The relational construction of an antisymmetric curvature two-form is itself
     open~\cite{Beau2026c}.
+
+  \paragraph{Transport data.}
+    The continuum hypotheses of Section~\ref{sec:connection} do not determine a connection.
+    Constructing a structure group, its representation and a connection, the data (T1)--(T3) of
+    §\ref{subsec:transport}, from admissibility structure is open, and so is the condition that the
+    resulting transport preserve admissible configurations.
+
+  \paragraph{Physical charges.}
+    Gauge charges in the sense of Definition~\ref{def:gauge-charge} are functions of the observable
+    state.
+    Identifying them with conserved physical charges requires a dynamics, a charge generator and a
+    matter representation, none of which is given here.
 
   \paragraph{Carrier selection.}
     The $\mathrm{SU}(2)$ sector of Proposition~\ref{thm:su2-rigidity} rests on a supplied carrier
@@ -518,6 +612,46 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
     Heisenberg substrate~\cite{Beau2026a31}, so no transfer from spectral data to a coupling is
     available.
 
+  \section{Conclusion}
+  \label{sec:conclusion}
+
+    The paper defines gauge charges as functions constant on the fibres of a non-injective
+    projection, and the gauge group as the group of fibre-preserving transformations.
+    A gauge charge factors through the projection, so it is a function of the observable state;
+    its identification with a conserved physical charge is open.
+    $\mathrm{U}(1)$ is the residual phase symmetry of span-based observables, and $\mathrm{SU}(2)$
+    is read off a supplied carrier under a neutral-sector hypothesis; neither result selects a gauge
+    group, and $\mathrm{SU}(3)$ is a hypothesis.
+    The two continuum hypotheses do not determine a connection, so a structure group, its
+    representation and a connection are supplied.
+    On these data the connection generates parallel transport, its curvature measures path
+    dependence around infinitesimal loops, and flatness gives a path-independent identification of
+    fibres only locally.
+    The Yang\textendash Mills action is singled out by a standard truncation argument on these data
+    and is motivated, not derived, by the admissibility principle.
+
+  \subsection*{Interpretive outlook}
+
+    What follows is a structural reading, offered as interpretation and not as a result.
+
+    A non-injective projection leaves a fibre that the observables do not resolve, and the
+    symmetries of that fibre are the natural place to read gauge redundancy.
+    The charge result fits that reading: a quantity constant on the fibres is a function of the
+    observable output, so gauge charges in this sense are quantities that the observables already see.
+    A quantity that is only invariant under the fibre-preserving group is a function of the observable
+    output when that group acts transitively on each fibre, and not in general.
+    Gauge physics needs more than redundancy.
+    It needs a particular group acting on the fibre, a rule for comparing fibres at different points,
+    and a dynamics for that rule.
+    The paper locates where each of these would enter and derives none of them from non-injectivity
+    together with a continuum description; for the connection it shows that the continuum hypotheses
+    do not determine it.
+    The group is read off a supplied carrier,
+    the comparison is a supplied connection, and the dynamics is a standard truncation on it.
+    A third party should situate the paper as a dictionary between non-injective projection and
+    gauge redundancy, and as a list of the inputs that a derivation of gauge fields would still have
+    to supply, not as such a derivation.
+
   \section*{Acknowledgements}
 
   The author acknowledges the use of large language models as a supportive tool for
@@ -528,6 +662,6 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
 
   \clearpage
   \bibliographystyle{plain}
-      \bibliography{cosmochrony-bibliography}
+      \bibliography{cosmochrony-bibliography,external-refs}
 
 \end{document}

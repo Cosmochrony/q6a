@@ -7,7 +7,7 @@ authors:
     given-names: "Jérôme"
 repository-code: "https://github.com/Cosmochrony/q6a"
 url: "https://cosmochrony.org/science/gauge-structure/q6a/"
-version: "2.5"
+version: "2.6"
 doi: "10.5281/zenodo.19655294"
 license: "CC-BY-4.0"
 preferred-citation:
