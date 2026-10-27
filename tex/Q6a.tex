@@ -379,13 +379,13 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
     lifts, and hence it does not identify neighbouring fibres.
     The two continuum hypotheses therefore do not determine a transport.
     On the trivial bundle $M \times \mathbb{C}$ over a coordinate patch, for instance, the covariant
-    derivatives $d$ and $d + i\,x\,dy$ have the same projection and the same fibres, while the first is
-    flat and the second has curvature $i\,dx \wedge dy$.
+    derivatives $d$ and $d + i\,y^1 dy^2$, in local coordinates $(y^1, y^2)$, have the same projection
+    and the same fibres, while the first is flat and the second has curvature $i\,dy^1 \wedge dy^2$.
 
     The development below therefore rests on a third input, supplied and not derived:
     \begin{enumerate}[(T1)]
-      \item a reduction of the fibre bundle to a principal bundle with a compact Lie structure group
-      $G$, of Lie algebra $\mathfrak{g}$;
+      \item a principal bundle with a compact Lie structure group $G$, of Lie algebra $\mathfrak{g}$,
+      of which the fibre bundle is an associated bundle;
       \item a unitary representation of $G$ on the fibre, states being local sections $\psi$ of the
       associated vector bundle;
       \item a connection on that principal bundle, acting on $\psi$ through the representation.
@@ -465,7 +465,7 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
   \subsection{Curvature as path dependence of transport}
 
     Given the transport map of §\ref{subsec:transport}, consider two infinitesimal
-    displacements $dx^\mu$ and $dx^\nu$ from a point $x$.
+    displacements $\delta x$ and $\delta' x$ from a point $x$.
     The failure of successive transports along these directions to commute defines
     the curvature of the connection.
 
@@ -481,8 +481,8 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
     \end{definition}
 
     $F_{\mu\nu}$ measures the path dependence of the supplied transport around infinitesimal loops:
-    transport around the small parallelogram spanned by $dx^\mu$ and $dx^\nu$ differs from the identity
-    by a term proportional to $F_{\mu\nu}\,dx^\mu dx^\nu$.
+    transport around the small parallelogram spanned by two displacements $\delta x$ and $\delta' x$
+    differs from the identity by a term proportional to $F_{\mu\nu}\,\delta x^\mu\,\delta' x^\nu$.
     Curvature is not a failure of admissibility.
     A curved connection transports configurations consistently along each path; what it does not
     provide is an identification of distant fibres independent of the path.
@@ -526,30 +526,37 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
       The truncation excludes higher powers such as $(F_{\mu\nu}F^{\mu\nu})^2$, whose field equations are
       of second order but which carry four derivatives in total.
       For a compact $\mathfrak{g}$ that is a sum of simple and abelian factors, the quadratic invariant
-      is fixed up to one positive coefficient per simple factor and a positive-definite symmetric
-      matrix on the abelian factors; that matrix, which allows kinetic mixing, becomes the identity in a
-      suitable basis of the abelian factors.
+      is fixed up to one coefficient per simple factor and a symmetric matrix on the abelian factors,
+      which allows kinetic mixing; requiring positive energy makes the coefficients positive and the
+      matrix positive-definite.
+      An orthogonal change of basis of the abelian factors diagonalises that matrix and leaves one
+      coupling per abelian factor; when a charge normalisation fixes the basis instead, the
+      off-diagonal kinetic-mixing entries are additional couplings.
       With these qualifications, the action is $\int\mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})$ with one coupling
-      per simple factor and, in that basis, one per abelian factor.
+      per simple factor and, in a diagonalising basis, one per abelian factor.
 
       \begin{remark}[Yang\textendash Mills action]
         \label{rem:ym-action}
-        Under the continuum hypotheses of §\ref{sec:connection}, the minimisation
+        On the supplied data (T1)--(T3) of §\ref{subsec:transport}, and under the continuum hypotheses
+        of §\ref{sec:connection}, the minimisation
         principle above is read as favouring the action
         \begin{equation}
           \label{eq:ym-action}
           S_{\mathrm{YM}}[A]
           \;=\; \int \mathrm{Tr}\bigl(F_{\mu\nu} F^{\mu\nu}\bigr)\,\sqrt{-g}\,d^4x,
         \end{equation}
-        whose variation yields the Yang\textendash Mills equations $D_\mu F^{\mu\nu} = 0$~\cite{YangMills1954}.
+        whose variation yields the Yang\textendash Mills equations $D_\mu F^{\mu\nu} = 0$~\cite{YangMills1954},
+        where $D_\mu$ includes the Levi-Civita connection of $g$.
         Here $\mathrm{Tr}$ is the trace in the representation (T2), negative-definite on the
-        anti-Hermitian algebra $\mathfrak{g}$; a positive coupling per factor is understood
+        anti-Hermitian algebra $\mathfrak{g}$; a positive coupling per factor, required by positive
+        energy, is understood
         in~\eqref{eq:ym-action}, the metric $g$ is a fixed background, and the variation is taken over
         connections with compactly supported variations, so that boundary terms vanish.
         This is a structural motivation, not a derivation from Axioms~A1--A4 alone.
         The uniqueness of~\eqref{eq:ym-action} holds under the truncation stated above (total mass
         dimension at most four, gauge-invariant, Lorentz-invariant, parity-even; one coupling per
-        simple factor and, in a basis that absorbs kinetic mixing, per abelian factor); it does not
+        simple factor and, in a basis that diagonalises the abelian kinetic matrix, per abelian factor);
+        it does not
         require the Cosmochrony framework.
         The framework does not supply $F_{\mu\nu}$ itself either: it is the curvature of the supplied
         connection of §\ref{subsec:transport}.
@@ -629,14 +636,17 @@ Fibre-Invariant Charges, a Supplied SU(2) Carrier, and a Conditional Connection}
 
     A non-injective projection leaves a fibre that the observables do not resolve, and the
     symmetries of that fibre are the natural place to read gauge redundancy.
-    The charge result points in the expected direction for that reading: what is invariant under
-    the redundancy is a function of the observable output, so gauge-invariant quantities are exactly
-    those the observables already see.
+    The charge result fits that reading: a quantity constant on the fibres is a function of the
+    observable output, so gauge charges in this sense are quantities that the observables already see.
+    A quantity that is only invariant under the fibre-preserving group is a function of the observable
+    output when that group acts transitively on each fibre, and not in general.
     Gauge physics needs more than redundancy.
     It needs a particular group acting on the fibre, a rule for comparing fibres at different points,
     and a dynamics for that rule.
-    The paper locates where each of these would enter and shows that none follows from
-    non-injectivity together with a continuum description: the group is read off a supplied carrier,
+    The paper locates where each of these would enter and derives none of them from non-injectivity
+    together with a continuum description; for the connection it shows that the continuum hypotheses
+    do not determine it.
+    The group is read off a supplied carrier,
     the comparison is a supplied connection, and the dynamics is a standard truncation on it.
     A third party should situate the paper as a dictionary between non-injective projection and
     gauge redundancy, and as a list of the inputs that a derivation of gauge fields would still have
